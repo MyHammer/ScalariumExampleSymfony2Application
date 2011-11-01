@@ -1,3 +1,7 @@
+imports:
+    - { resource: parameters_scalarium.php }
+    - { resource: config.yml }
+
 doctrine:
     dbal:
         driver:   %database_driver%
