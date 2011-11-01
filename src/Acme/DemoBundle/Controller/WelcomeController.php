@@ -8,6 +8,9 @@ class WelcomeController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('AcmeDemoBundle:Welcome:index.html.twig');
+        $thingRepository = $this->getDoctrine()->getRepository('AcmeDemoBundle:Thing');
+        $thing = $thingRepository->findOneByValue('Hello World');
+        return $this->render('AcmeDemoBundle:Welcome:index.html.twig',
+                             array('thing' => $thing));
     }
 }
