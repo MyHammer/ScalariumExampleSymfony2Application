@@ -1,4 +1,4 @@
-current_release = release_pat
+current_release = release_path
 
 node[:deploy].each do |application, deploy|
 
