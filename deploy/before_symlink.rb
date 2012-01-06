@@ -1,0 +1,1 @@
+run "cd #{release_path} && php bin/vendors update"
